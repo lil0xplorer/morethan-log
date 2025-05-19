@@ -2,17 +2,17 @@ const CONFIG = {
   profile: {
     name: "John Doe",
     image: "/avatar.svg",
-    role: "frontend developer",
-    bio: "I develop everything using node.",
+    role: "Frontend Developer",
+    bio: "I develop everything using Node.",
     email: "john@example.com",
-    linkedin: "",
-    github: "",
-    instagram: "",
+    linkedin: "https://linkedin.com/in/yourusername",
+    github: "https://github.com/yourusername",
+    instagram: "https://instagram.com/yourusername",
   },
   projects: [
     {
-      name: `portfolio`,
-      href: "https://github.com",
+      name: "portfolio",
+      href: "https://github.com/yourusername/portfolio", // or live demo URL
     },
   ],
   blog: {
@@ -20,11 +20,11 @@ const CONFIG = {
     description: "Welcome to my blog!",
     scheme: "dark",
   },
-  link: "http://localhost:3000",
+  link: "https://insidepwn.com", // ✅ your live domain
   since: 2023,
   lang: "en-US",
-  ogImageGenerateURL: "",
-  isProd: process.env.VERCEL_ENV === "production"
+  ogImageGenerateURL: "https://insidepwn.com/api/og", // if you're using dynamic OG images
+  isProd: process.env.VERCEL_ENV === "production" // ✅ works correctly with Vercel
 }
 
 module.exports = { CONFIG }
