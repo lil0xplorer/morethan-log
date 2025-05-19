@@ -1,6 +1,10 @@
 FROM node:18-bookworm
 
-RUN apt update && \
-  apt install npm -y
-
 WORKDIR /app
+
+COPY package.json yarn.lock ./
+RUN yarn install
+
+COPY . .
+
+ENV PATH /app/node_modules/.bin:$PATH
